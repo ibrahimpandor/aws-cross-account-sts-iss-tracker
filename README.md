@@ -26,7 +26,7 @@ AWS Security Token Service (STS) eliminates static keys entirely. A Lambda funct
 5. Lambda uses those credentials to write the ISS JSON payload to S3 in Account B
 6. Credentials expire — nothing persists
 
-## How
+## evidence 
 
 ## Security Design
 
