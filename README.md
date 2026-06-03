@@ -30,6 +30,31 @@ AWS Security Token Service (STS) eliminates static keys entirely. A Lambda funct
 
 ## evidence 
 
+## Successful Lambda Execution
+Lambda in Account A executed successfully, fetching ISS data and writing to Account B's S3 bucket via STS temporary credentials.
+
+![Lambda Success](lambda-success.png)
+
+## ISS Data in Account B S3 Bucket
+JSON file written to iss-tracker-data-bucket in Account B, confirming cross-account write succeeded.
+
+![S3 Object](s3-object.png)
+
+## Account B IAM Role
+Cross-account role in Account B with AmazonS3FullAccess and trust policy allowing Account A.
+
+![IAM Role](iam-role.png)
+
+## Scoped STS Policy in Account A
+Inline policy on Lambda execution role showing sts:AssumeRole scoped to one specific role ARN in Account B — least privilege in action.
+
+![STS Policy](sts-policy.png)
+
+## Trust Policy
+Account B role trust policy showing Account A (532025488915) as the only trusted principal.
+
+![Trust Policy](trust-policy.png)
+
 ## Security Design
 
 - **No static keys** — temporary credentials only, expiring after 1 hour
