@@ -18,7 +18,7 @@ This project directly mirrors a pattern used in production AWS environments acro
 
 ## The Problem
 
-In real AWS environments, workloads span multiple accounts — production, staging, shared services, security tooling. The naive solution is to create IAM users with static access keys and paste them into applications. This is how companies get breached. Static keys don't expire, they get committed to GitHub, stolen from environment variables, and used for months before anyone notices.
+In real AWS environments, workloads span multiple accounts — production, staging, shared services, security tooling. The wrong solution is to create IAM users with static access keys and paste them into applications. This is how companies get breached. Static keys don't expire, they get committed to GitHub, stolen from environment variables, and used for months before anyone notices.
 
 ## The Solution
 
