@@ -1,5 +1,7 @@
 # AWS Cross-Account STS ISS Tracker
 
+---
+
 A serverless AWS pipeline demonstrating secure cross-account access using STS AssumeRole — no static credentials, no long-lived keys.
 
 ## The Problem
